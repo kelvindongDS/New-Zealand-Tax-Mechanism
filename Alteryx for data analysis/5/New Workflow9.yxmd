@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="594" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Kelvin\AppData\Local\Temp\Engine_6028_6841a952a21546318df9efe63c002fc1_\Engine_9324_f33542507cb24a6694ee1d32c9445f4c_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="378" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>TimeRegister</InputFieldName>
+          <Format>Month, yyyy</Format>
+          <OutputFieldName>M_Y</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert TimeRegister To:
+Month, yyyy</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="474" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="CustomerID" action="Count" rename="Count" />
+            <SummarizeField field="M_Y" action="GroupBy" rename="M_Y" />
+            <SummarizeField field="Geography" action="GroupBy" rename="Geography" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[BusinessSegment] = "Tax Agent"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>BusinessSegment</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-05-29 01:03:48</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Tax Agent</Operand>
+              <StartDate>2018-05-29 01:03:48</StartDate>
+              <EndDate>2018-05-29 01:03:48</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[BusinessSegment] = "Tax Agent"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:KELVIN
+Table=Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CustomerID" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="Int32" />
+            <Field name="BusinessSegment" size="50" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="V_String" />
+            <Field name="FName" size="50" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="V_String" />
+            <Field name="LName" size="50" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="V_String" />
+            <Field name="Register" size="5" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="V_String" />
+            <Field name="Active" size="5" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="V_String" />
+            <Field name="Geography" size="50" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="V_String" />
+            <Field name="TimeRegister" source="File: aka:KELVIN|||Select Organization.*, Customer.FName, Customer.LName, Customer.Register, Customer.Active, Customer.Geography, Customer.TimeRegister From Customer Inner Join Organization On Customer.CustomerID = Organization.CustomerID" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="270" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Register] = "Yes"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Register</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-05-29 14:34:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2018-05-29 14:34:36</StartDate>
+              <EndDate>2018-05-29 14:34:36</EndDate>
+              <Operand>Yes</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Register] = "Yes"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow9</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

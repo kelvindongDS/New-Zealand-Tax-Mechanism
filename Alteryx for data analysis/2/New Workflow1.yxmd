@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:KELVIN
+Table=Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CustomerID" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="Int32" />
+            <Field name="FName" size="50" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="LName" size="50" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="Register" size="5" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="Active" size="5" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="Geography" size="50" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="TimeRegister" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="DateTime" />
+            <Field name="TaxReturnID" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="Int32" />
+            <Field name="FilingChannel" size="30" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="ReturnType" size="50" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="V_String" />
+            <Field name="TimeRegister1" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="DateTime" />
+            <Field name="ReturnAmount" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="Int32" />
+            <Field name="CustomerID1" source="File: aka:KELVIN|||Select Customer.*, TaxReturn.TaxReturnID, TaxReturn.FilingChannel, TaxReturn.ReturnType, TaxReturn.TimeRegister As TimeRegister1, TaxReturn.ReturnAmount, TaxReturn.CustomerID As CustomerID1 From Customer Inner Join TaxReturn On Customer.CustomerID = TaxReturn.CustomerID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="258" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="FilingChannel" action="GroupBy" rename="FilingChannel" />
+            <SummarizeField field="ReturnType" action="GroupBy" rename="ReturnType" />
+            <SummarizeField field="CustomerID" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="378" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Kelvin\AppData\Local\Temp\Engine_10252_288e3c6a35ff45b4ae30421dadd1df46_\Engine_13748_cb409c666a654d9e9a646ff46b8d98c0_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Register] = "Yes"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Register</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-06-08 10:57:13</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Yes</Operand>
+              <StartDate>2018-06-08 10:57:13</StartDate>
+              <EndDate>2018-06-08 10:57:13</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Register] = "Yes"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

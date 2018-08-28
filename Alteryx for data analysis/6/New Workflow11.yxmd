@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="462" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Kelvin\AppData\Local\Temp\Engine_11056_4eefad6e1edf40b4b1884f0628c74e47_\Engine_9324_06ba45d8679e4436935804ed73510d04_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:KELVIN
+Table=Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FamilyID" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="Int32" />
+            <Field name="WorkingForFamilyTaxEntitlement" scale="0" size="20" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="FixedDecimal" />
+            <Field name="WorkingForFamilyTaxType" size="50" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="V_String" />
+            <Field name="ChildSupport" size="5" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="V_String" />
+            <Field name="NumberOfChild" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="Int32" />
+            <Field name="Time" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="DateTime" />
+            <Field name="CustomerID1" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="Int32" />
+            <Field name="CustomerID2" source="File: aka:KELVIN|||Select FamilyWithChild.*, Family1.NumberOfChild, Family1.Time, Family1.CustomerID1, Family1.CustomerID2 From Family1 Inner Join FamilyWithChild On Family1.FamilyID = FamilyWithChild.FamilyID" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DateTime.DateTime">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <IsFrom value="True" />
+          <InputFieldName>Time</InputFieldName>
+          <Format>Month, yyyy</Format>
+          <OutputFieldName>M_Y</OutputFieldName>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Convert Time To:
+Month, yyyy</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDateTime" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="390" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="M_Y" action="GroupBy" rename="M_Y" />
+            <SummarizeField field="WorkingForFamilyTaxType" action="GroupBy" rename="WorkingForFamilyTaxType" />
+            <SummarizeField field="WorkingForFamilyTaxEntitlement" action="AvgNo0" rename="AvgNo0_WorkingForFamilyTaxEntitlement" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="282" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[ChildSupport] = "Yes"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>ChildSupport</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-05-29 20:44:24</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Yes</Operand>
+              <StartDate>2018-05-29 20:44:24</StartDate>
+              <EndDate>2018-05-29 20:44:24</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[ChildSupport] = "Yes"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow11</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
